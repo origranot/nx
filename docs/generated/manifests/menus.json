@@ -1822,7 +1822,7 @@
             "isExternal": false,
             "children": [
               {
-                "name": "How to configure webpack on your Nx workspace",
+                "name": "How to configure Webpack in your Nx workspace",
                 "path": "/recipes/webpack/webpack-config-setup",
                 "id": "webpack-config-setup",
                 "isExternal": false,
@@ -3351,7 +3351,7 @@
         "isExternal": false,
         "children": [
           {
-            "name": "How to configure webpack on your Nx workspace",
+            "name": "How to configure Webpack in your Nx workspace",
             "path": "/recipes/webpack/webpack-config-setup",
             "id": "webpack-config-setup",
             "isExternal": false,
@@ -3370,7 +3370,7 @@
         "disableCollapsible": false
       },
       {
-        "name": "How to configure webpack on your Nx workspace",
+        "name": "How to configure Webpack in your Nx workspace",
         "path": "/recipes/webpack/webpack-config-setup",
         "id": "webpack-config-setup",
         "isExternal": false,

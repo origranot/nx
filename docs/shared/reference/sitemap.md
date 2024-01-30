@@ -313,6 +313,7 @@
   - [Reference](/ci/reference)
     - [Configuration Options](/ci/reference/config)
     - [nx-cloud CLI](/ci/reference/nx-cloud-cli)
+    - [Launch Templates](/ci/reference/launch-templates)
     - [Environment Variables](/ci/reference/env-vars)
     - [Server API Reference](/ci/reference/server-api)
     - [Release Notes](/ci/reference/release-notes)

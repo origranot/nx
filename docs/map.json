@@ -1891,6 +1891,11 @@
               "file": "nx-cloud/reference/nx-cloud-cli"
             },
             {
+              "name": "Launch Templates",
+              "id": "launch-templates",
+              "file": "nx-cloud/reference/launch-templates"
+            },
+            {
               "name": "Environment Variables",
               "id": "env-vars",
               "file": "nx-cloud/reference/env-vars"

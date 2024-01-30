@@ -1255,6 +1255,17 @@
         "tags": []
       },
       {
+        "id": "launch-templates",
+        "name": "Launch Templates",
+        "description": "",
+        "mediaImage": "",
+        "file": "nx-cloud/reference/launch-templates",
+        "itemList": [],
+        "isExternal": false,
+        "path": "/ci/reference/launch-templates",
+        "tags": []
+      },
+      {
         "id": "env-vars",
         "name": "Environment Variables",
         "description": "",
@@ -1312,6 +1323,17 @@
     "itemList": [],
     "isExternal": false,
     "path": "/ci/reference/nx-cloud-cli",
+    "tags": []
+  },
+  "/ci/reference/launch-templates": {
+    "id": "launch-templates",
+    "name": "Launch Templates",
+    "description": "",
+    "mediaImage": "",
+    "file": "nx-cloud/reference/launch-templates",
+    "itemList": [],
+    "isExternal": false,
+    "path": "/ci/reference/launch-templates",
     "tags": []
   },
   "/ci/reference/env-vars": {

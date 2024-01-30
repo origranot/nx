@@ -18,7 +18,7 @@ pipelines:
           script:
             - npm ci
             - npx nx-cloud record -- nx format:check
-            - npx nx affected -t lint test build --base=origin/master --head=HEAD --configuration=ci
+            - npx nx affected -t lint test build --base=origin/master --head=HEAD
 
   branches:
     main:
@@ -29,7 +29,7 @@ pipelines:
           script:
             - npm ci
             - npx nx-cloud record -- nx format:check
-            - npx nx affected -t lint test build --base=HEAD~1 --configuration=ci
+            - npx nx affected -t lint test build --base=HEAD~1
 ```
 
 The `pull-requests` and `main` jobs implement the CI workflow.

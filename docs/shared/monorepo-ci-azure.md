@@ -51,7 +51,7 @@ jobs:
       - script: git branch --track main origin/main
       - script: npm ci
       - script: npx nx-cloud record -- nx format:check --base=$(BASE_SHA)
-      - script: npx nx affected --base=$(BASE_SHA) -t lint test build --parallel=3 --configuration=ci
+      - script: npx nx affected --base=$(BASE_SHA) -t lint test build --parallel=3
 ```
 
 {% callout type="note" title="Check your Shallow Fetch settings" %}
@@ -165,7 +165,7 @@ jobs:
       - script: npm ci
       - script: npx nx-cloud start-ci-run --stop-agents-after="build"
       - script: npx nx-cloud record -- nx format:check --base=$(BASE_SHA) --head=$(HEAD_SHA)
-      - script: npx nx affected --base=$(BASE_SHA) --head=$(HEAD_SHA) -t lint test build --parallel=2 --configuration=ci
+      - script: npx nx affected --base=$(BASE_SHA) --head=$(HEAD_SHA) -t lint test build --parallel=2
 ```
 
 This configuration is setting up two types of jobs - a main job and three agent jobs.

@@ -279,7 +279,7 @@ jobs:
             - ~/.cache/Cypress
       - nx/set-shas
 
-      - run: pnpm nx affected --base=$NX_BASE --head=$NX_HEAD -t lint test build --parallel=3 --configuration=ci
+      - run: pnpm nx affected --base=$NX_BASE --head=$NX_HEAD -t lint test build --parallel=3
       - run: pnpm nx affected --base=$NX_BASE --head=$NX_HEAD -t e2e-ci --parallel=1
 workflows:
   build:
@@ -387,7 +387,7 @@ With this pipeline configuration in place, no matter how large the repository sc
 
 Sometimes you want to distribute most of your commands, but run some of them in Circle CI. You can do it as follows:
 
-```yaml {% fileName=".circleci/config.yml" highlightLines=[2,3,20,22,23] %}
+```yaml {% fileName=".circleci/config.yml" highlightLines=[24] %}
 version: 2.1
 orbs:
   nx: nrwl/nx@1.5.1
@@ -410,7 +410,7 @@ jobs:
             - ~/.cache/Cypress
       - nx/set-shas
 
-      - run: pnpm nx affected --base=$NX_BASE --head=$NX_HEAD -t lint test build --parallel=3 --configuration=ci
+      - run: pnpm nx affected --base=$NX_BASE --head=$NX_HEAD -t lint test build --parallel=3
       - run: pnpm nx affected --base=$NX_BASE --head=$NX_HEAD -t e2e-ci --parallel=1
       - run: pnpm nx affected --base=$NX_BASE --head=$NX_HEAD -t deploy --no-agents # run without distribution
 workflows:

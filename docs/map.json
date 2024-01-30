@@ -1678,7 +1678,7 @@
               "id": "on-premise",
               "tags": ["on-premise"],
               "file": "nx-cloud/private/nx-enterprise-on-prem"
-            },
+            }
           ]
         },
         {

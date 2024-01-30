@@ -49,7 +49,7 @@ test:
   stage: test
   extends: .distributed
   script:
-    - npx nx affected --base=$NX_BASE --head=$NX_HEAD -t test --parallel=3 --configuration=ci
+    - npx nx affected --base=$NX_BASE --head=$NX_HEAD -t test --parallel=3 
 
 build:
   stage: build

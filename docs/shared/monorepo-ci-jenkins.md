@@ -71,7 +71,7 @@ pipeline {
                         sh "npm ci"
                         sh "npx nx-cloud start-ci-run --stop-agents-after='build'"
                         sh "npx nx-cloud record -- nx format:check"
-                        sh "npx nx affected --base=HEAD~1 -t lint --parallel=3 & npx nx affected --base=HEAD~1 -t test --parallel=3 --configuration=ci & npx nx affected --base=HEAD~1 -t build --parallel=3"
+                        sh "npx nx affected --base=HEAD~1 -t lint --parallel=3 & npx nx affected --base=HEAD~1 -t test --parallel=3 & npx nx affected --base=HEAD~1 -t build --parallel=3"
                     }
                 }
                 stage('PR') {
@@ -83,7 +83,7 @@ pipeline {
                         sh "npm ci"
                         sh "npx nx-cloud start-ci-run --stop-agents-after='build'"
                         sh "npx nx-cloud record -- nx format:check"
-                        sh "npx nx affected --base origin/${env.CHANGE_TARGET} -t lint --parallel=2 & npx nx affected --base origin/${env.CHANGE_TARGET} -t test --parallel=2 --configuration=ci & npx nx affected --base origin/${env.CHANGE_TARGET} -t build --parallel=2"
+                        sh "npx nx affected --base origin/${env.CHANGE_TARGET} -t lint --parallel=2 & npx nx affected --base origin/${env.CHANGE_TARGET} -t test --parallel=2 & npx nx affected --base origin/${env.CHANGE_TARGET} -t build --parallel=2"
                     }
                 }
 

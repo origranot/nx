@@ -26,19 +26,15 @@ run.
 You can fix it by telling Nx Cloud that it can terminate agents after it sees a certain
 target: `npx nx-cloud start-ci-run --stop-agents-after=e2e`.
 
-> Earlier versions of `nx-cloud` required you to set the `NX_CLOUD_DISTRIBUTED_EXECUTION` env variable to `true`
-> to
-> enable DTE, but in the latest version `npx nx-cloud start-ci-run` does it automatically.
-
-## Enabling/Disabling DTE
+## Enabling/Disabling Distribution
 
 Invoking `npx nx-cloud start-ci-run` will tell Nx to distribute by default. You can enable/disable distribution for
 individual commands as follows:
 
+- `nx affected -t build --agents` (explicitly enable distribution, Nx >= 14.7)
+- `nx affected -t build --no-agents` (explicitly disable distribution, Nx >= 14.7)
 - `nx affected -t build --dte` (explicitly enable distribution, Nx >= 14.7)
 - `nx affected -t build --no-dte` (explicitly disable distribution, Nx >= 14.7)
-- `NX_CLOUD_DISTRIBUTED_EXECUTION=true nx affected -t build` (explicitly enable distribution)
-- `NX_CLOUD_DISTRIBUTED_EXECUTION=false nx affected -t build` (explicitly disable distribution)
 
 ## npx nx-cloud stop-all-agents
 

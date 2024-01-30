@@ -31,13 +31,6 @@ variable. `NX_CLOUD_ACCESS_TOKEN` takes precedence over the `accessToken` proper
 token stored in `nx.json` and a read-write token set via `NX_CLOUD_ACCESS_TOKEN` in CI. If you are using this
 environment variable with Distributed Task Execution, the value on the main and agent jobs must match.
 
-### NX_CLOUD_DISTRIBUTED_EXECUTION_AGENT_COUNT
-
-The Nx Cloud plans distributed task execution based on the available information from the running agents. Due to
-asynchronous nature of CI jobs, an agent might not have been created or started at the moment when DTE is initiated.
-Setting `NX_CLOUD_DISTRIBUTED_EXECUTION_AGENT_COUNT` to say 8 will inform Nx Cloud to assume that there will be 8 agents
-running. This can have an impact on better distribution of the tasks and allocation of the agents.
-
 ### NX_CLOUD_DISTRIBUTED_EXECUTION_STOP_AGENTS_ON_FAILURE
 
 Setting `NX_CLOUD_DISTRIBUTED_EXECUTION_STOP_AGENTS_ON_FAILURE` to `true` will tell Nx Cloud to stop agents if a command

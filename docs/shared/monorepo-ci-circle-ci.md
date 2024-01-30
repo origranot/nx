@@ -20,7 +20,7 @@ jobs:
       - nx/set-shas
 
       - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected --base=$NX_BASE --head=$NX_HEAD -t lint,test,build --parallel=3 --configuration=ci
+      - run: npx nx affected --base=$NX_BASE --head=$NX_HEAD -t lint test build --parallel=3 --configuration=ci
 workflows:
   build:
     jobs:
@@ -69,7 +69,7 @@ jobs:
       # Send logs to Nx Cloud for any CLI command
       - run: npx nx-cloud record -- nx format:check
       # Lint, test and build on agent jobs everything affected by a change
-      - run: npx nx affected --base=$NX_BASE --head=$NX_HEAD -t lint,test,build --parallel=2 --configuration=ci
+      - run: npx nx affected --base=$NX_BASE --head=$NX_HEAD -t lint test build --parallel=2 --configuration=ci
   agent:
     docker:
       - image: cimg/node:lts-browsers

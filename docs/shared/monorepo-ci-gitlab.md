@@ -114,7 +114,7 @@ nx-dte:
   script:
     - yarn nx-cloud start-ci-run --stop-agents-after=build
     - yarn nx-cloud record -- nx format:check --base=$NX_BASE --head=$NX_HEAD
-    - yarn nx affected --base=$NX_BASE --head=$NX_HEAD -t lint,test,build --parallel=2
+    - yarn nx affected --base=$NX_BASE --head=$NX_HEAD -t lint test build --parallel=2
 
 # Create as many agents as you want
 nx-dte-agent1:

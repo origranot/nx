@@ -80,7 +80,7 @@ The setup looks like this:
 # Coordinate the agents to run the tasks and stop agents when the build tasks are done
 - npx nx-cloud start-ci-run --stop-agents-after=build
 # Run any commands you want here
-- nx affected -t lint,test,build
+- nx affected -t lint test build
 ```
 
 ```yaml {% fileName="agent.yml" %}

@@ -38,7 +38,7 @@ jobs:
       - run: git branch --track main origin/main
 
       - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected -t lint,test,build --parallel=3
+      - run: npx nx affected -t lint test build --parallel=3
 ```
 
 ### Get the Commit of the Last Successful Build
@@ -78,7 +78,7 @@ jobs:
       parallel-commands: |
         npx nx-cloud record -- nx format:check
       parallel-commands-on-agents: |
-        npx nx affected -t lint,test,build --parallel=2
+        npx nx affected -t lint test build --parallel=2
 
   agents:
     name: Nx Cloud - Agents
@@ -192,7 +192,7 @@ jobs:
           run_command "NX_CLOUD_DISTRIBUTED_EXECUTION=false npx nx-cloud record -- nx format:check"
 
           # list of commands to be run on agents
-          run_command "npx nx affected -t lint,test,build --parallel=3"
+          run_command "npx nx affected -t lint test build --parallel=3"
 
           # wait for all background processes to finish
           for pid in ${pids[*]}; do

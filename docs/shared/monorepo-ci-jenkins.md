@@ -23,7 +23,7 @@ pipeline {
                     steps {
                         sh "npm ci"
                         sh "npx nx-cloud record -- nx format:check"
-                        sh "npx nx affected --base=HEAD~1 -t lint,test,build --parallel=3"
+                        sh "npx nx affected --base=HEAD~1 -t lint test build --parallel=3"
                     }
                 }
                 stage('PR') {
@@ -34,7 +34,7 @@ pipeline {
                     steps {
                         sh "npm ci"
                         sh "npx nx-cloud record -- nx format:check"
-                        sh "npx nx affected --base origin/${env.CHANGE_TARGET} -t lint,test,build --parallel=3"
+                        sh "npx nx affected --base origin/${env.CHANGE_TARGET} -t lint test build --parallel=3"
                     }
                 }
             }
